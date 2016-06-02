@@ -59,7 +59,7 @@ $.fn.S3Uploader = (options) ->
         $uploadForm.trigger("s3_uploads_start", [e])
 
       progress: (e, data) ->
-        data.progress = parseInt(data.loaded / data.total * 100, 10)
+        data.progress = data.loaded / data.total * 100
         $uploadForm.trigger("s3_uploads_progress", [e, data])
 
       done: (e, data) ->
